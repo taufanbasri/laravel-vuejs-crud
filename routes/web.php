@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::resource('biodata', 'BiodataController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
